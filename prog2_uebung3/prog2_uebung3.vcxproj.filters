@@ -21,9 +21,15 @@
     <ClCompile Include="Complex.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="SimpleVector.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Complex.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleVector.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

@@ -28,6 +28,10 @@ public:
 	Complex operator+(const Complex& p) const;
 	
 	Complex operator*(const int& a);
+	Complex operator*(const Complex& p);
+	Complex operator*(const Complex& p) const;
+
 	
 };
 
+ostream& operator<<(ostream& os, const Complex& o);

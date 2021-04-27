@@ -56,8 +56,39 @@ Complex Complex::operator+(const Complex& p) const
 	return r;
 }
 
-/*Complex Complex::operator*(const int& a)
+Complex Complex::operator*(const int& a)
 {
-	Complex r = Complex(this->getRe)
+	Complex r = Complex(this->getRe() * a, this->getIm() * a);
+	return r;
 }
-*/
+
+Complex Complex::operator*(const Complex& p) {
+	Complex r = Complex(getRe(), getIm());
+	r.setRe(getRe() * p.getRe() - getIm() * p.getIm());
+	r.setIm(getRe() * p.getIm() + p.getRe() * getIm());
+	return r;
+}
+
+Complex Complex::operator*(const Complex& p) const {
+	Complex r = Complex(getRe(), getIm());
+	r.setRe(getRe() * p.getRe() - getIm() * p.getIm());
+	r.setIm(getRe() * p.getIm() + p.getRe() * getIm());
+	return r;
+}
+
+ostream& operator<<(ostream& os, const Complex& o)
+{
+	if (o.getIm() < 0) {
+		os << o.getRe() << " " << o.getIm() << "i";
+	}
+	else {
+		os << o.getRe() << " + " << o.getIm() << "i";
+	}
+	return os;
+}
+
+Complex operator*(const int& a, const Complex& o) {
+	Complex r = Complex(a * o.getRe(), a * o.getIm());
+	return r;
+}
+
