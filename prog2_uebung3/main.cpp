@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
 	//Complex c3b = 3 * c1;
 	//c3b = operator*(3, c1);
 
-
+	//test
 	const Complex cc1(2.0, 0.0);
 	const Complex cc2(0.0, 2.0);
 
