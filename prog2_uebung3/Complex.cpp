@@ -76,6 +76,14 @@ Complex Complex::operator*(const Complex& p) const {
 	return r;
 }
 
+Complex Complex::operator+=(const Complex& p) {
+	Complex r = Complex(getRe(), getIm());
+	r.setRe(getRe() + p.getRe()); // r.re += p.re;
+	r.setIm(getIm() + p.getIm());
+	return r;
+
+}
+
 ostream& operator<<(ostream& os, const Complex& o)
 {
 	if (o.getIm() < 0) {

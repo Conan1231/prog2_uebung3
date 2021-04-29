@@ -31,7 +31,10 @@ public:
 	Complex operator*(const Complex& p);
 	Complex operator*(const Complex& p) const;
 
+	Complex operator+=(const Complex& p);
+
 	
 };
 
 ostream& operator<<(ostream& os, const Complex& o);
+Complex operator*(const int& a, const Complex& o);

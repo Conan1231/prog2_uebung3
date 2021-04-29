@@ -12,9 +12,15 @@ private:
 public:
 	SimpleVector();
 	SimpleVector(int len);
-	//SimpleVector(const SimpleVector& v2);
+	int getsize() const;
+	int getdata(int i) const;
+	SimpleVector(const SimpleVector& v2);
 	~SimpleVector();
 
 	SimpleVector& operator=(const SimpleVector& vref);
+	void operator<<=(int nval);
+	void operator+=(int nval);
+	bool operator<(const SimpleVector& v);
 };
 
+ostream& operator<<(ostream& os, const SimpleVector& o);
